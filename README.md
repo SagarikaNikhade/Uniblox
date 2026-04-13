@@ -2,8 +2,10 @@
 
 A full-stack ecommerce system built using **Node.js, Express, TypeScript, and React** with an in-memory JSON database.  
 The system supports cart management, checkout, coupon generation, and an admin dashboard.
+<img width="972" height="797" alt="Screenshot 2026-04-13 at 16 17 36" src="https://github.com/user-attachments/assets/2e495360-d75c-4c92-ae03-688726c9a8f9" />
 
-<img width="1470" height="956" alt="Screenshot 2026-04-13 at 16 15 05" src="https://github.com/user-attachments/assets/c0dbcc2d-bef1-4f7c-8d1e-5ef6d8d0b61a" />
+<img width="972" height="797" alt="Screenshot 2026-04-13 at 16 17 29" src="https://github.com/user-attachments/assets/22c927bd-53a3-44b0-b999-4983a34c6a98" />
+
 
 ---
 
