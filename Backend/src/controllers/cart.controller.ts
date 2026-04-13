@@ -37,3 +37,8 @@ export const getCart = (req: Request, res: Response) => {
   const db = readDB();
   res.json({ cart: db.cart });
 };
+
+export const getOrders = (req: Request, res: Response) => {
+  const db = readDB();
+  res.json({ orders: db.orders });
+};

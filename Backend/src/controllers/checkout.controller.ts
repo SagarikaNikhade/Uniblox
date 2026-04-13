@@ -55,10 +55,11 @@ export const checkout = (req: Request, res: Response) => {
     db.stats.totalRevenue += finalAmount;
     db.stats.totalDiscount += discountApplied;
 
+    const { nthOrder, discountPercent } = db.discountConfig;
     let generatedCoupon = null;
 
     // 5. Generate coupon (every 3rd order)
-    if (db.orders.length % 3 === 0) {
+    if (db.orders.length % nthOrder === 0) {
       generatedCoupon = {
         code: "SAVE10-" + db.orders.length,
         discountPercent: 10,

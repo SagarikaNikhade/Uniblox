@@ -32,3 +32,26 @@ export const getStats = (req: Request, res: Response) => {
     coupons: db.coupons
   });
 };
+
+export const updateDiscountConfig = (req: Request, res: Response) => {
+  const db = readDB();
+  const { nthOrder, discountPercent } = req.body;
+
+  if (!nthOrder || !discountPercent) {
+    return res.status(400).json({
+      message: "nthOrder and discountPercent required"
+    });
+  }
+
+  db.discountConfig = {
+    nthOrder,
+    discountPercent
+  };
+
+  writeDB(db);
+
+  res.json({
+    message: "Discount config updated",
+    config: db.discountConfig
+  });
+};

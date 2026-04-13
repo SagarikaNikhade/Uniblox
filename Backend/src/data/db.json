@@ -101,5 +101,9 @@
     "totalItems": 32,
     "totalRevenue": 19780,
     "totalDiscount": 20
+  },
+  "discountConfig": {
+    "nthOrder": 1,
+    "discountPercent": 10
   }
 }
