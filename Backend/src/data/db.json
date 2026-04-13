@@ -95,6 +95,11 @@
       "code": "ADMIN-1776071016622",
       "discountPercent": 20,
       "isUsed": false
+    },
+    {
+      "code": "ADMIN-1776077065761",
+      "discountPercent": 10,
+      "isUsed": false
     }
   ],
   "stats": {
@@ -103,7 +108,7 @@
     "totalDiscount": 20
   },
   "discountConfig": {
-    "nthOrder": 1,
-    "discountPercent": 10
+    "nthOrder": 7,
+    "discountPercent": 100
   }
 }
