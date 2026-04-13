@@ -1,0 +1,105 @@
+{
+  "cart": [
+    {
+      "productId": "p7",
+      "name": "jackets",
+      "price": 5000,
+      "quantity": 2
+    }
+  ],
+  "orders": [
+    {
+      "id": "10bc9852-e6c4-4063-a18b-ffaf662a1d37",
+      "items": [
+        {
+          "productId": "p1",
+          "name": "watch",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "productId": "p2",
+          "name": "t-shirt",
+          "price": 1000,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 2100,
+      "discountApplied": 0,
+      "finalAmount": 2100
+    },
+    {
+      "id": "5565e270-c1ea-4da9-81d7-d4a1ca2678b2",
+      "items": [
+        {
+          "productId": "p3",
+          "name": "jeans pants",
+          "price": 1200,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 1200,
+      "discountApplied": 0,
+      "finalAmount": 1200
+    },
+    {
+      "id": "a013cfe7-5401-41a8-b5f4-ef9f9cfce586",
+      "items": [
+        {
+          "productId": "p4",
+          "name": "shoes",
+          "price": 1500,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 3000,
+      "discountApplied": 0,
+      "finalAmount": 3000
+    },
+    {
+      "id": "1856990d-aed3-4a80-9a39-64b870334daf",
+      "items": [
+        {
+          "productId": "p5",
+          "name": "shocks",
+          "price": 50,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 100,
+      "discountApplied": 10,
+      "finalAmount": 90
+    },
+    {
+      "id": "877a6e57-5f1a-4321-bf6b-1607077a6931",
+      "items": [
+        {
+          "productId": "p6",
+          "name": "shocks",
+          "price": 50,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 100,
+      "discountApplied": 0,
+      "finalAmount": 100
+    }
+  ],
+  "coupons": [
+    {
+      "code": "SAVE10-3",
+      "discountPercent": 10,
+      "isUsed": true
+    },
+    {
+      "code": "ADMIN-1776071016622",
+      "discountPercent": 20,
+      "isUsed": false
+    }
+  ],
+  "stats": {
+    "totalItems": 32,
+    "totalRevenue": 19780,
+    "totalDiscount": 20
+  }
+}

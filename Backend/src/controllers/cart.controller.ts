@@ -1,48 +1,39 @@
 import { Request, Response } from "express";
-import { cart } from "../store/store";
-import { CartItem } from "../models/cart.model";
+import { readDB, writeDB } from "../utils/db";
 
-// Add item to cart
 export const addToCart = (req: Request, res: Response) => {
   try {
+    const db = readDB();
+
     const { productId, name, price, quantity } = req.body;
 
-    // validation
     if (!productId || !name || !price || !quantity) {
-      return res.status(400).json({
-        message: "All fields are required"
-      });
+      return res.status(400).json({ message: "All fields required" });
     }
 
-    const existingItem = cart.find(
-      (item) => item.productId === productId
+    const existingItem = db.cart.find(
+      (item: any) => item.productId === productId
     );
 
     if (existingItem) {
       existingItem.quantity += quantity;
     } else {
-      const newItem: CartItem = {
-        productId,
-        name,
-        price,
-        quantity
-      };
-      cart.push(newItem);
+      db.cart.push({ productId, name, price, quantity });
     }
 
+    writeDB(db);
+
     return res.json({
-      message: "Item added to cart",
-      cart
+      message: "Item added",
+      cart: db.cart
     });
 
   } catch (error) {
-    return res.status(500).json({
-      message: "Internal server error"
-    });
+    return res.status(500).json({ message: "Error" });
   }
 };
 
-// Get cart
 export const getCart = (req: Request, res: Response) => {
-  return res.json({ cart });
+  const db = readDB();
+  res.json({ cart: db.cart });
 };
